@@ -1,0 +1,252 @@
+html {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #A29BFE;
+    color: #2D3436;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 32px;
+}
+
+*{
+    box-sizing: border-box; 
+}
+
+.menu {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-width: 320px;
+    box-shadow: 0px 4px 8px rgba(38, 50, 56, 0.08), 0px 2px 4px rgba(38, 50, 56, 0.16);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 16px 15px;
+    background-color: #FFFFFF;
+    border-radius: 20px 20px 0 0; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__image {
+    max-width: 100%;
+}
+
+.logo__text {
+    font-size: 24px;
+    line-height: 36px;
+    color: #5C5C5C;
+    letter-spacing: 0.25px;
+    font-weight: bold;
+}
+
+.button {
+    padding: 4px 34px;
+    border-radius: 8px;
+    background-color: #2D3436;
+    color: #FFFFFF;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 0px 4px 8px rgba(38, 50, 56, 0.08), 0px 2px 4px rgba(38, 50, 56, 0.16);
+    box-shadow: 0px 4px 8px rgba(38, 50, 56, 0.08), 0px 2px 4px rgba(38, 50, 56, 0.16);
+}
+
+.main {
+    background-color: #FFFFFF;
+}
+
+.screen {
+    min-height: 450px;
+    background: url("img/background-320.png") repeat-x, 
+                url("img/background-rectangle-320.png") no-repeat right top,
+                url("img/background-points-320.png") no-repeat top right;
+    background-size: auto auto;
+}
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.shadow {
+    text-shadow: 0px 4px 0px #FFFFFF;
+}
+
+.mobile__title {
+    margin: 0;
+    margin-top: 48px;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.mobile__subtitle {
+    margin: 0;
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.mobile__content {
+    max-width: 330px;
+    margin: 16px auto 0 auto;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.accent {
+    position: relative;
+    color: #E83493;
+    z-index: 0;
+}
+
+.accent::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: -5px;
+    width: 119px;
+    height: 32px;
+    background: #55EFC4;
+    border-radius: 999px;
+    z-index: -1;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1440px;
+    }
+
+    .header {
+        padding: 16px 135px 16px 150px;
+    }
+
+    .logo__image {
+        width: 70px;
+    }
+
+    .logo__text {
+        font-size: 48px;
+        line-height: 56px;
+        color: #2D3436;
+        letter-spacing: -1px;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu__nav {
+        white-space: nowrap;
+    }
+    
+    .menu__link {
+        position: relative;
+        color: #6C5CE7;
+        position: relative;
+        padding: 37px 20px;
+        line-height: 32px;
+    }
+    
+    .menu__link::before {
+        content: '';
+        position: absolute;
+        top: 45px;
+        left: -4px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-image: url(img/menu-separator.png);
+        background-color: #FDCB6E;
+    }
+    
+    .menu__link:first-child::before {
+        display: none;
+    }
+    
+    .menu__link:hover {
+        color: #2D3436;
+    }
+    
+    .button {
+        padding: 14px 30px;
+        border-radius: 999px;
+        font-size: 24px;
+        line-height: 36px;
+        box-shadow: none;
+    }
+
+    .screen {
+        min-height: 450px;
+        background: url("img/background-rectangle-1024.png") no-repeat right top,
+                    url("img/background-points-1024.png") no-repeat top right;
+        background-size: auto auto;
+    }
+
+    .mobile {
+        display: none;
+    }
+    
+    .desktop {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .desktop__title {
+        margin: 0;
+        margin-top: 80px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 96px;
+        line-height: 104px;
+    }
+
+    .desktop__subtitle {
+        margin: 0;
+        margin-top: 16px;
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 77px;
+    }
+
+    .accent::after {
+        bottom: 0px;
+        left: 0px;
+        width: 191px;
+        height: 51px;
+    }
+}
